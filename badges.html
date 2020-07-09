@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Curso Bootstrap</title>
+
+    <!--Bootstrap 4-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+
+<body>
+
+
+    <h1>HCode Treinamentos <span class="badge badge-danger">Novo!</span></h1>
+    <h2>HCode Treinamentos <span class="badge badge-danger">Novo!</span></h1>
+    <h3>HCode Treinamentos <span class="badge badge-danger">Novo!</span></h1>
+    <h4>HCode Treinamentos <span class="badge badge-danger">Novo!</span></h1>
+    <h5>HCode Treinamentos <span class="badge badge-danger">Novo!</span></h1>
+    <h6>HCode Treinamentos <span class="badge badge-danger">Novo!</span></h1>
+
+    <hr>
+
+    <button class="btn btn-primary">Clique Aqui <span class="badge badge-light">0</span></button>
+
+    <hr>
+    
+    <span class="badge badge-primary">1</span>
+    <span class="badge badge-secondary">2</span>
+    <span class="badge badge-success">3</span>
+    <span class="badge badge-danger">4</span>
+    <span class="badge badge-info">5</span>
+    <span class="badge badge-warning">6</span>
+    <span class="badge badge-dark">7</span>
+    <span class="badge badge-light">8</span>
+
+    <hr>
+
+    <a href="" class="badge badge-success badge-pill">completo</a>
+
+    <hr>
+
+    <span class="badge badge-info">ok</span>
+    <span class="badge badge-info badge-pill">ok</span>
+    
+    <hr>
+
+    <button id="btn-click" class="btn btn-primary">
+        Caixa de Entrada <span class="badge badge-light">0</span>
+        <span class="sr-only">Há mensagens não lidas</span>
+    </button> 
+
+
+    <!--Scripts Jquery e Bootstrap JS com Popper-->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+    $(() => {
+
+        $('#btn-click').on('click', e => {
+
+           const valor = parseInt($(e.target).find('.badge').text());
+
+           $(e.target).find('.badge').text(valor + 1);
+        });
+
+    });
+    </script>
+
+</body>
+</html>
