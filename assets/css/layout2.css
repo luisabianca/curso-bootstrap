@@ -74,3 +74,19 @@ footer img {
     height: 45px;
     border-radius: 16px;
 }
+
+#lido {
+    width: 18px;
+    height: 15px;
+    margin-right: 0;
+}
+
+.badge-success {
+    background-color: #09d261;
+}
+
+@media screen and (max-width:575px) {
+    #chatopen {
+        visibility: hidden;
+    }
+}
