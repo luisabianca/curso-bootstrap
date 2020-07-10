@@ -5,81 +5,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Curso Bootstrap</title>
+    <title>WhatsApp</title>
+
+    <link rel="stylesheet" href="assets/fonts/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/layout2.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="alert alert-success" role="alert">
-            Você está aprendendo Bootstrap 4 com sucesso!!
-        </div>
-
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                <div class="alert alert-secondary">
-                    Você está aprendendo Bootstrap 4 com sucesso!!
+            <div class="col-md-4 px-0">
+
+                <header class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <img src="assets/layout-02/ftbia.jpg" alt="avatar">
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <img class="iconszap" src="assets/layout-02/loader.svg" alt="status">
+                        <img class="iconszap" src="assets/layout-02/chat.svg" alt="chat">
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </header>
+
+                <div>
+                    <nav>
+                        <input id="pesqbar" class="form-control align-self-center" type="search"
+                        placeholder="Procurar ou começar uma nova conversa"
+                        aria-label="Pesquisar">
+                    </nav>
+
+                    <div class="list-group">
+                        <a class="list-group-item list-group-item-action d-flex justify-content-between" href="#">
+                            <span class="d-flex">
+                                <img src="assets/layout-02/hcode-photo.svg" alt="avatar">
+                                <div class="mt-2">
+                                    <h6>Hcode</h6>
+                                    <small class="font-weight-bold">Ricardo: Quase lá, hein...</small>
+                                </div>
+                            </span>
+
+                            <span>
+                                <small class="timeago">19:13</small><br>
+                                <small class="badge badge-success badge-pill">20</small>
+                                <span class="sr-only">Há mensagens não lidas</span>
+
+                            </span>
+                        </a>
+
+                        <a class="list-group-item list-group-item-action d-flex justify-content-between" href="#">
+                            <span class="d-flex">
+                                <img src="assets/layout-02/ftmarcelle.jpg" alt="avatar">
+                                <div class="mt-2">
+                                    <h6 class="font-weight-normal">Marcelle</h6>
+                                    <small class="timeago">Já consegui pegar a tv</small>
+                                </div>
+                            </span>
+
+                            <span>
+                                <small class="timeago">19:13</small><br>
+                            </span>
+                        </a>
+                    </div>
                 </div>
+
+
             </div>
 
-            <div class="col">
-                <div class="alert alert-primary">
-                    Você está aprendendo Bootstrap 4 com sucesso!!
-                </div>
+            <div class="col-md-8 px-0 d-flex flex-column">
+                <img>
+
+                <header class="d-flex align-items-center justify-content-between" id="navright">
+
+                    <span class="d-flex align-items-center">
+                        <img src="assets/layout-02/ftmarcelle.jpg" alt="Avatar">
+                        <div class="flex-column flex-fill">
+                            <h6>Marcelle</h6>
+                            <small class="timeago">Visto por último: Segunda-feira às 15:34</small>
+                        </div>
+                    </span>
+
+                    <div>
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                        <i class="fa fa-paperclip" aria-hidden="true"></i>
+                        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                    </div>
+                </header>
+
+                <main>  
+                </main>
+
+                <footer class="d-flex justify-content-between align-items-center">
+                    <img class="ml-3" src="assets/layout-02/smile.svg" alt="emoji">
+                    <input type="text" class="form-control" placeholder= "Digite uma mensagem">
+                    <img class="mr-3" src="assets/layout-02/microphone.svg" alt="microphone">
+                </footer>
+
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                <div class="alert alert-danger">
-                    Você está aprendendo Bootstrap 4 com sucesso!!
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="alert alert-warning">
-                    Você está aprendendo Bootstrap 4 com sucesso!!
-                </div>
-            </div>
-        </div>
-
-        <div class="alert alert-info">
-            Information!
-            <a href="http://luisabianca.github.io" target="_blank">Resume Bianca Santos</a>
-        </div>
-
-        <div class="alert alert-dark">
-            <h4>Título</h4>
-            <p>Mas chegou o carnaval e ela não desfilou
-                e eu chorei, na avenida, eu chorei.
-                Não pensei que mentia a cabrocha que eu tanto amei.
-            </p>
-            <hr>
-            <p>
-                And I don't talk with you when you are like this.
-                Look around like i'm not your favorite town.
-                I'm New York City. I still do it for you, baby.
-            </p>
-        </div>
-
-
-        <div class="alert alert-success alert-dismissible fade show">
-            Só por você eu dei até o que eu não tive.
-            Há tantos que vivem sem viver um grande amor.
-            Eu que sonhei por tanto tempo em ser livre,
-            me prenda em seus braços, é o que eu te peço.
-            <button class="close" 
-            data-dismiss="alert" 
-            aria-label="close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-
-        <button id="btn-close-all" type="button">
-            Fechar todos os Alertas
-        </button>
-
     </div>
   
     <script src="assets/js/jquery-3.5.1.min.js"></script>
@@ -88,11 +113,6 @@
     <script>
     $(() => {
 
-        $('#btn-close-all').on('click', e => {
-
-            $('.alert').alert('close');
-
-        });
 
     });
     </script>
