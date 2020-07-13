@@ -15,21 +15,17 @@
 
     <div class="container">
 
-        <form action="">
-            <div class="row">
-                <div class="col">
-                    <input type="text" placeholder="Primeiro Nome" class="form-control">
-                    <small class="text-muted">Digite sem abreviações</small>
-                </div>
-                <div class="col">
-                    <input type="text" placeholder="Último Nome" class="form-control">
-                    <small class="text-muted">Digite sem abreviações</small>
-                </div>
-            </div>
+        <form class="form-inline">
 
-            <button class="btn btn-primary mt-2" type="submit">Enviar</button>
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" class="form-control mr-sm-2 mb-2">
+
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" class="form-control mr-sm-2 mb-2">
+
+            <button type="submit" class="btn btn-primary mb-2">Enviar</button>
         </form>
-
+        
     </div>
 
 

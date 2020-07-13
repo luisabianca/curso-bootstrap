@@ -16,15 +16,15 @@
 
     <div class="container">
 
-        <form action="">
+        <form novalidate class="need-validation">
             <div class="form-row">
                 <div class="col form-group">
                     <label for="name">Primeiro Nome</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" required>
                 </div>
                 <div class="col form-group">
                     <label for="last">Último Nome</label>
-                    <input type="text" class="form-control">
+                    <input type="text" class="form-control" required>
                 </div>
             </div>
     
@@ -74,14 +74,15 @@
                     <label for="country">País</label>
                     <input type="text" id="country" class="form-control">
                 </div>
+
             </div>
+
+            <div class="form-row">
+                <button class="btn btn-primary btn-block active" type="submit">Salvar</button>
+            </div>
+
         </form>
 
-        <div class="row">
-            <div class="col">
-                <button class="btn btn-primary btn-block active">Salvar</button>
-            </div>
-        </div>
     </div>
 
 
@@ -92,10 +93,50 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     
     <script>
+    /* Com JQuery
     $(() => {
+  
+        $('form').on('submit', e => {
 
+            const form = e.target;
+
+            if (form.checkValidity() === false) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+
+            }
+
+            $(form).addClass('was-validated');
+
+        });
 
     });
+    */
+
+    window.addEventListener('load', e =>{
+
+        const form = document.querySelector('form');
+
+        form.addEventListener('submit', es => {
+
+            if (form.checkValidity() === false) {
+
+            es.preventDefault();
+            es.stopPropagation();
+
+
+        }
+
+        form.classList.add('was-validated');
+
+        })
+
+    })
+
+
+
     </script>
 
 </body>
